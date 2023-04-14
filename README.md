@@ -8,9 +8,9 @@ Listen i sin helhet kan forkastes, dersom man velger knappen "clear list".
 Avgjørelsen må bekrftes.
 
 
-# install npm
-
-# install React
+Prosjektet krever:
+install npm
+install React
 
 
 
