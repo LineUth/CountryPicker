@@ -1,0 +1,38 @@
+
+.CP-header{
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(5px + 2vmin);
+    color: white;     
+}
+    
+.split-screen{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.left-column {  
+    border: solid; 
+    border-color: #282c34;
+    padding-left: 5%;
+    width: 50%;
+    height: 100%;
+  }
+  
+.right-column{
+    border: solid; 
+    border-color: #e2bc3d;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    margin: 5%;
+    width: 50%;
+    height: 100%;
+  }
+
+  .country-sort{
+    padding-bottom: 2%;
+  }
