@@ -6,7 +6,7 @@ function CountryPicker() {
   const [countries, setCountries] = useState([]);                           // lager et tomt array for å lagre listen med land fra APIet
   const [selectedCountries, setSelectedCountries] = useState([]);           // lager et tomt array for å lagre listen med land som brukeren velger
   const [selectedContinent, setSelectedContinent] = useState('');
-
+   
   useEffect(() => {
     fetch('https://restcountries.com/v3.1/all')
       .then(response => response.json())                                    //henter JSON-data fra APIet
@@ -44,7 +44,7 @@ function CountryPicker() {
         setSelectedCountries([]);
           }
       };
-                                                                             // Return: Bygger opp siden med div, for splitte skjermen
+                                                                            // Return: Bygger opp siden med div, for splitte skjermen
                                                                             // Countries arrayet vises på v.side og selectedCountries vises på h.side
                                                                             // OnChange detekerer om checkboxer har blitt endret, dersom den gjør det, kjøres if-else(isChecked)                                                                                                                                                     
                                                                             
@@ -54,21 +54,21 @@ function CountryPicker() {
             <div className='left-column'>
                 <h1>Select Countries</h1>
                 <form>
-                <div className='country-sort'>
-              <label>
-               <strong>Continent:  </strong>
-                <select value={selectedContinent} onChange={handleContinentSelect}>
-                  <option value=''>All</option>
-                  <option value='Africa'>Africa</option>
-                  <option value='Americas'>America</option>
-                  <option value='Asia'>Asia</option>
-                  <option value='Europe'>Europe</option>
-                  <option value='Oceania'>Oceania</option>
-                </select>
-              </label>
-            </div>
-            {sortedCountries.map(country => (
-              <div key={country.name.common}>
+                  <div className='country-sort'>
+                    <label>
+                    <strong>Continent:  </strong>
+                      <select value={selectedContinent} onChange={handleContinentSelect}>
+                        <option value=''>All</option>
+                        <option value='Africa'>Africa</option>
+                        <option value='Americas'>America</option>
+                        <option value='Asia'>Asia</option>
+                        <option value='Europe'>Europe</option>
+                        <option value='Oceania'>Oceania</option>
+                    </select>
+                    </label>
+                  </div>
+                    {sortedCountries.map(country => (
+                      <div key={country.name.common}>
                         <label>
                         <input
                             type="checkbox"
