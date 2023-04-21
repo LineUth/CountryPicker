@@ -5,7 +5,7 @@ import './CountryPicker.css';                                               // H
 function CountryPicker() {
   const [countries, setCountries] = useState([]);                           // lager et tomt array for å lagre listen med land fra APIet
   const [selectedCountries, setSelectedCountries] = useState([]);           // lager et tomt array for å lagre listen med land som brukeren velger
-  const [selectedContinent, setSelectedContinent] = useState('');
+  const [selectedContinent, setSelectedContinent] = useState('');           // henter en verdi fra kontinent
    
   useEffect(() => {
     fetch('https://restcountries.com/v3.1/all')
